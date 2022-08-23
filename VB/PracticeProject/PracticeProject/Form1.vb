@@ -6,3 +6,4 @@
     Private Sub PictureBox2_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox2.MouseMove
         Label1.Text = 2"
     End Sub
+End Class
