@@ -14,14 +14,14 @@ namespace Game
     public partial class Form1 : Form
     {
         Sprite p1;
-        Sprite p2;
-        ArrayList objects = new ArrayList();
+        Chaser p2;
+        public ArrayList objects = new ArrayList();
         public Form1()
         {
 
             InitializeComponent();
             p1 = new Sprite(player, this);
-            p2 = new Sprite(player2, this);
+            p2 = new Chaser(player2, this);
             objects.Add(p1);
             objects.Add(p2);
         }
@@ -53,12 +53,6 @@ namespace Game
                     return s;
             }
             return null;
-        }
-
-        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -113,8 +107,7 @@ namespace Game
                 progressBar1.Value++;
             foreach (Sprite item in objects)
             {
-                if (isClear(item.m_picture, 0, 5))
-                    item.tick();
+                item.tick();
             }
 
         }

@@ -19,7 +19,7 @@ namespace Game
             m_location = picture.Location;
             m_parent = parent;
         }
-        public void tick()
+        public virtual void tick()
         {
             movedown();
         }
@@ -27,33 +27,29 @@ namespace Game
         {
 
         }
+        public void move(int X, int Y)
+        {
+            if (!m_parent.isClear(m_picture, m_speed * X, m_speed * Y))
+                return;
+            m_location = new Point(m_location.X + m_speed * X, m_location.Y + m_speed * Y);
+            m_picture.Location = m_location;
+
+        }
         public void moveleft()
         {
-            if (!m_parent.isClear(m_picture, -m_speed, 0))
-                return;
-            m_location = new Point(m_location.X - m_speed, m_location.Y);
-            m_picture.Location = m_location;
+            move(-1, 0);
         }
         public void moveright()
         {
-            if (!m_parent.isClear(m_picture, +m_speed, 0))
-                return;
-            m_location = new Point(m_location.X + m_speed, m_location.Y);
-            m_picture.Location = m_location;
+            move(1, 0);
         }
         public void moveup()
         {
-            if (!m_parent.isClear(m_picture, 0, -m_speed))
-                return;
-            m_location = new Point(m_location.X, m_location.Y - m_speed);
-            m_picture.Location = m_location;
+            move(0, -1);
         }
         public void movedown()
         {
-            if (!m_parent.isClear(m_picture, 0, +m_speed))
-                return;
-            m_location = new Point(m_location.X, m_location.Y + m_speed);
-            m_picture.Location = m_location;
+            move(0, 1);
         }
     }
 
