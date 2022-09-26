@@ -45,7 +45,7 @@ Partial Class Form1
         'BulletPictureBox2
         '
         Me.BulletPictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BulletPictureBox2.Image = Global.MyGame.My.Resources.Resources.thK2VN2JJ9
+        Me.BulletPictureBox2.Image = Global.MyGame.My.Resources.Resources.donut_circle
         Me.BulletPictureBox2.Location = New System.Drawing.Point(737, 137)
         Me.BulletPictureBox2.Name = "BulletPictureBox2"
         Me.BulletPictureBox2.Size = New System.Drawing.Size(38, 34)
@@ -66,7 +66,7 @@ Partial Class Form1
         'WallPictureBox4
         '
         Me.WallPictureBox4.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.WallPictureBox4.Location = New System.Drawing.Point(196, 272)
+        Me.WallPictureBox4.Location = New System.Drawing.Point(164, 311)
         Me.WallPictureBox4.Name = "WallPictureBox4"
         Me.WallPictureBox4.Size = New System.Drawing.Size(388, 25)
         Me.WallPictureBox4.TabIndex = 5
@@ -74,7 +74,7 @@ Partial Class Form1
         '
         'Target
         '
-        Me.Target.Image = Global.MyGame.My.Resources.Resources.donut_circle
+        Me.Target.Image = Global.MyGame.My.Resources.Resources.froyo_circle
         Me.Target.Location = New System.Drawing.Point(455, 62)
         Me.Target.Name = "Target"
         Me.Target.Size = New System.Drawing.Size(43, 50)
@@ -84,7 +84,7 @@ Partial Class Form1
         '
         'Player
         '
-        Me.Player.Image = Global.MyGame.My.Resources.Resources.Pokemonxy
+        Me.Player.Image = Global.MyGame.My.Resources.Resources.donut_circle
         Me.Player.Location = New System.Drawing.Point(137, 86)
         Me.Player.Name = "Player"
         Me.Player.Size = New System.Drawing.Size(121, 72)

@@ -73,9 +73,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Pokemonxy() As System.Drawing.Bitmap
+        Friend ReadOnly Property froyo_circle() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Pokemonxy", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("froyo_circle", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -83,9 +83,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property thK2VN2JJ9() As System.Drawing.Bitmap
+        Friend ReadOnly Property Pokemonxy() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("thK2VN2JJ9", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Pokemonxy", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
