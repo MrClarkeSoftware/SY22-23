@@ -20,12 +20,14 @@ namespace Game
         public override bool collision(PictureBox other)
         {
             Debug.Print(m_picture.Name + " collided with " + other.Name);
-            // We collided, so if x isn't clear change x direction
-            if (!m_parent.isClear(m_picture,m_picture.Location.X + m_xdir, m_picture.Location.Y))
+            // We collided, so let's figure out which way we should "bounce"
+            // Clear
+            //if (!m_parent.isClear(m_picture,m_picture.Location.X + m_xdir, m_picture.Location.Y))
                 m_xdir *= -1;
-            else  // otherwise change y direction
+            //if (!m_parent.isClear(m_picture, m_picture.Location.X, m_picture.Location.Y + m_ydir))
                 m_ydir *= -1;
-            return false; // don't go through items
+           
+            return false; // bounce
         }
         public override void tick()
         {

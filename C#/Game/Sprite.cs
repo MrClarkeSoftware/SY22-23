@@ -32,7 +32,7 @@ namespace Game
         virtual public bool collision(PictureBox other)
         {
             Debug.Print(m_picture.Name + " collided with " + other.Name);
-            return true;//  go through stuff
+            return false;//  don't go through stuff
         }
         public void move(int X, int Y)
         {

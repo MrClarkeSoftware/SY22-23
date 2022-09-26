@@ -63,7 +63,8 @@ namespace Game
                         s = getSpriteByPictureBox(other);
                         if (s != null)
                             s.collision(P);
-                        return retVal;
+                        if (!retVal)
+                            return retVal;
                     }
                 }
             }
