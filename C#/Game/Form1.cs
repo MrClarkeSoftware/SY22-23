@@ -13,48 +13,24 @@ namespace Game
 {
     public partial class Form1 : Form
     {
+        public Canvas c = null;
         Sprite p1;
         Chaser p2;
-        public ArrayList objects = new ArrayList();
+        Ball b1;
+       // public ArrayList objects = new ArrayList();
         public Form1()
         {
 
             InitializeComponent();
-            p1 = new Sprite(player, this);
-            p2 = new Chaser(player2, this);
-            objects.Add(p1);
-            objects.Add(p2);
+            c = new Canvas(this);
+            p1 = new Sprite(player);
+            p2 = new Chaser(player2);
+            b1 = new Ball(Ballpicture, 5, 5);
+            c.Add(p1);
+            //c.Add(p2);
+           // c.Add(b1);
         }
-        public bool isClear(PictureBox P, int X, int Y)
-        {
-            foreach (var item in Controls)
-            {
-                if (typeof(PictureBox) == item.GetType() && P != item)
-                {
-                    PictureBox other = (PictureBox)item;
-                    Rectangle newRect = new Rectangle(P.Location.X + X, P.Location.Y + Y, P.Width, P.Height);
-                    if (other.Bounds.IntersectsWith(newRect))
-                    {
-                        Sprite s = getSprite(P);
-                        if (s != null)
-                            s.collision(getSprite(other));
-
-                        return false;
-                    }
-                }
-            }
-            return true;
-        }
-        public Sprite getSprite(PictureBox p)
-        {
-            foreach (Sprite s in objects)
-            {
-                if (s.m_picture == p)
-                    return s;
-            }
-            return null;
-        }
-
+        
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
 
@@ -96,7 +72,26 @@ namespace Game
             if (e.KeyCode == Keys.S)
             {
                 p2.movedown();
-
+            }
+            if (e.KeyCode == Keys.Space)
+            {
+                PictureBox p = new PictureBox();
+                p.Location = player.Location;
+                p.Width = Ballpicture.Width;
+                p.Size = Ballpicture.Size;
+                p.BackColor = Ballpicture.BackColor;
+                p.Top = player.Location.X;
+                p.Left = player.Location.Y;
+                p.Width = Ballpicture.Width;
+                p.Height = Ballpicture.Height;
+                p.BackColor = Ballpicture.BackColor;
+                p.SizeMode = Ballpicture.SizeMode;
+                if (Ballpicture.Image != null)
+                    p.Image = Ballpicture.Image;
+                p.Name = Ballpicture.Name;
+                p.Visible = true;
+                Controls.Add(p);
+                c.Add(new Sprite(p));
             }
 
         }
@@ -105,11 +100,8 @@ namespace Game
         {
             if (progressBar1.Value < progressBar1.Maximum)
                 progressBar1.Value++;
-            foreach (Sprite item in objects)
-            {
-                item.tick();
-            }
-
+            // let the canvas do all the work
+            c.tick();
         }
 
 

@@ -9,34 +9,29 @@ namespace Game
 {
     class Chaser : Sprite
     {
-        public Chaser(PictureBox picture, Form1 parent) : base(picture, parent)
+        int m_xdir = 0;
+        int m_ydir = 0;
+        public Chaser(PictureBox picture) : base(picture)
         {
-
+        }
+        public override bool collision(PictureBox other)
+        {
+            return false;
         }
         public override void tick()
         {
-            int xdir = 0;
-            int ydir = 0;
-
-            foreach (var item in m_parent.objects)
-            {
-                if (typeof(Sprite) == item.GetType() && this != item)
-                {
-                    Sprite other = (Sprite)item;
-                    if (other.m_picture.Name == "player")
-                    {
-                        if (other.m_location.X < this.m_location.X)
-                            xdir = -5;
-                        else
-                            xdir = 5;
-                        if (other.m_location.Y < this.m_location.Y)
-                            ydir = -5;
-                        else
-                            ydir = 5;
-                    }
-                }
-            }
-            move(xdir, ydir);
+            Sprite other = m_parent.getSpriteByName("player");
+          
+            if (other.m_location.X < this.m_location.X)
+                m_xdir = -5;
+            else
+                m_xdir = 5;
+            if (other.m_location.Y < this.m_location.Y)
+                m_ydir = -5;
+            else
+                m_ydir = 5;
+           
+            move(m_xdir, m_ydir);
 
         }
     }
