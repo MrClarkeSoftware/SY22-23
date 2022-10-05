@@ -75,7 +75,7 @@ Partial Class Form1
         'Target
         '
         Me.Target.Image = Global.MyGame.My.Resources.Resources.froyo_circle
-        Me.Target.Location = New System.Drawing.Point(455, 62)
+        Me.Target.Location = New System.Drawing.Point(454, 86)
         Me.Target.Name = "Target"
         Me.Target.Size = New System.Drawing.Size(43, 50)
         Me.Target.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
