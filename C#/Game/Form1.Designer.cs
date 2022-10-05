@@ -38,6 +38,7 @@ namespace Game
             this.Ballpicture = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -92,7 +93,7 @@ namespace Game
             // Ballpicture
             // 
             this.Ballpicture.BackColor = System.Drawing.Color.IndianRed;
-            this.Ballpicture.Location = new System.Drawing.Point(350, 90);
+            this.Ballpicture.Location = new System.Drawing.Point(617, 90);
             this.Ballpicture.Name = "Ballpicture";
             this.Ballpicture.Size = new System.Drawing.Size(19, 19);
             this.Ballpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -119,11 +120,21 @@ namespace Game
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 318);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Ballpicture);
@@ -141,6 +152,7 @@ namespace Game
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -154,6 +166,7 @@ namespace Game
         private System.Windows.Forms.PictureBox Ballpicture;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label1;
     }
 }
 

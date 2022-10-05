@@ -11,7 +11,7 @@ namespace Game
 {
     public class Canvas
     {
-        Form1 m_parent;
+        public Form1 m_parent;
         public ArrayList objects = new ArrayList();
 
         public Canvas(Form1 parent)

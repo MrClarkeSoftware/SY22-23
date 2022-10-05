@@ -27,7 +27,7 @@ namespace Game
             p2 = new Chaser(player2);
             b1 = new Ball(Ballpicture, 5, 5);
             c.Add(p1);
-           // c.Add(p2);
+            c.Add(p2);
             c.Add(b1);
         }
         
