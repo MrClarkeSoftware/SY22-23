@@ -54,8 +54,8 @@ Public Class Form1
                 direction = New Point(Speed, 0)
                 moveto(Player, Speed, 0)
             Case Keys.Space
-                'Add a bullet in the direction the player is facing
-                AddAt(BulletPictureBox2, Player.Location, direction)
+                'Add a ball in the direction the player is facing
+                AddAt(BulletPictureBox2, New Point(60, 60), New Point(5, 5), "BALL")
         End Select
     End Sub
 

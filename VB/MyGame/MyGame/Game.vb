@@ -10,12 +10,11 @@
         Dim idx As Integer
     End Structure
 
-    Sub moveto(p As PictureBox, x As Integer, y As Integer)
-        moveto(p, New Point(x, y))
-    End Sub
-    Sub moveto(p As PictureBox, dir As Point)
+    Function moveto(p As PictureBox, x As Integer, y As Integer) As Boolean
+        Return moveto(p, New Point(x, y))
+    End Function
+    Function moveto(p As PictureBox, dir As Point) As Boolean
         p.Location += dir
-
 
         'Go through all objects on Form1
         For Each c In Form1.Controls
@@ -23,19 +22,21 @@
                 'report any collisions
                 If p.Bounds.IntersectsWith(c.Bounds) Then
                     If Form1.Collision(p, c) Then
-                        Return
+                        Return True
                     Else
                         p.Location -= dir
                     End If
                 End If
             End If
         Next
+        Debug.Print(p.Name & ":(" & p.Location.X & "," & p.Location.Y & ")")
 
         'Keep track of the player move for "CHASE"
         If p.Name = "Player" Then
             PlayerMoves.Add(p.Location)
         End If
-    End Sub
+        Return False
+    End Function
 
     Sub chase(chaser As PictureBox)
         Static headstart As Integer
@@ -58,8 +59,8 @@
         p.Location = loc
         p.Size = bullet.Size
         p.BackColor = bullet.BackColor
-        p.Top = loc.X
-        p.Left = loc.Y
+        p.Top = loc.Y
+        p.Left = loc.X
         p.Width = bullet.Width
         p.Height = bullet.Height
         p.BackColor = bullet.BackColor
@@ -79,10 +80,14 @@
     Sub AddAt(bullet As PictureBox, loc As Point, action As String)
         Add(CreatePicture(bullet, loc), loc, action)
     End Sub
+    Sub AddAt(bullet As PictureBox, loc As Point, dir As Point, action As String)
+        Add(CreatePicture(bullet, loc), dir, action)
+    End Sub
 
     Sub AddAt(bullet As PictureBox, loc As Point, path() As Point)
         Add(CreatePicture(bullet, loc), path)
     End Sub
+
     Sub Add(p As PictureBox, dirs() As Point)
         Dim a As New action
         a.name = "PATTERN"
@@ -102,6 +107,7 @@
 
     Sub Add(p As PictureBox, dir As Point)
         Dim a As New action
+        ReDim Preserve a.dir(1)
         a.dir(0) = dir
         a.pic = p
         obj.Add(p, a)
@@ -117,6 +123,7 @@
         Dim r As New Random
         Try
             For Each p In obj
+                Dim a As action = p.Value
                 Select Case p.Value.name
                     Case "", "MOVE"
                         moveto(p.Key, p.Value.dir(0))
@@ -127,11 +134,22 @@
                     Case "RANDOM"
                         moveto(p.Key, p.Value.dir(0) + New Point(r.Next(-10, 10), r.Next(-10, -10)))
                     Case "PATTERN"
-                        Dim a As action = p.Value
                         Dim i As Integer
                         i = n Mod (UBound(a.dir) + 1)
                         moveto(p.Key, p.Value.dir(i))
                         n = (n + 1) Mod 1000
+                    Case "BALL"
+                        Dim x As Integer = p.Value.dir(0).X
+                        Dim y As Integer = p.Value.dir(0).Y
+
+                        If moveto(p.Key, New Point(x, 0)) Then
+                            Debug.Print("BOUNCE X")
+                            p.Value.dir(0) = New Point(-p.Value.dir(0).X, p.Value.dir(0).Y)
+                        End If
+                        If moveto(p.Key, New Point(0, y)) Then
+                            Debug.Print("BOUNCE Y")
+                            p.Value.dir(0) = New Point(p.Value.dir(0).X, -p.Value.dir(0).Y)
+                        End If
                 End Select
             Next
         Catch ex As Exception
