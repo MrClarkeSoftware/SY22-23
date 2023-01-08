@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "X6rZmuV+oLF0maNyyzCVIyVN11989/86oJgKwbfwNpS05iDMlJPHLG2QjgxhEYGRLEWveQlw3I9cR9OKjLgIiw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Android\\source\\repos\\SY22-23\\VB\\WpfApp1\\WpfApp1\\WpfApp1.vbproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Android\\.nuget\\packages\\wpfanimatedgif\\2.0.2\\wpfanimatedgif.2.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

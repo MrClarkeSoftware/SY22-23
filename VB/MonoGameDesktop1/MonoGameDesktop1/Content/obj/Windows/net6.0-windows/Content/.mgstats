@@ -1,0 +1,3 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/Android/source/repos/SY22-23/VB/MonoGameDesktop1/MonoGameDesktop1/Content/ball.png","C:/Users/Android/source/repos/SY22-23/VB/MonoGameDesktop1/MonoGameDesktop1/Content/bin/Windows/Content/ball.xnb","TextureProcessor","Texture2DContent",8368,16469,0.1377686
+"C:/Users/Android/source/repos/SY22-23/VB/MonoGameDesktop1/MonoGameDesktop1/Content/fire-fireball.gif","C:/Users/Android/source/repos/SY22-23/VB/MonoGameDesktop1/MonoGameDesktop1/Content/bin/Windows/Content/fire-fireball.xnb","TextureProcessor","Texture2DContent",1667217,992101,0.2198818

@@ -85,7 +85,7 @@ Partial Class Form1
         'Player
         '
         Me.Player.Image = Global.MyGame.My.Resources.Resources.donut_circle
-        Me.Player.Location = New System.Drawing.Point(137, 86)
+        Me.Player.Location = New System.Drawing.Point(164, 168)
         Me.Player.Name = "Player"
         Me.Player.Size = New System.Drawing.Size(121, 72)
         Me.Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage

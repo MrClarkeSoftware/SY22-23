@@ -1,0 +1,11 @@
+C:\Users\Android\source\repos\SY22-23\C#\GridProgram\GridProgram\obj\Debug\GridProgram.csproj.AssemblyReference.cache
+C:\Users\Android\source\repos\SY22-23\C#\GridProgram\GridProgram\obj\Debug\GridProgram.csproj.SuggestedBindingRedirects.cache
+C:\Users\Android\source\repos\SY22-23\C#\GridProgram\GridProgram\obj\Debug\GridProgram.Form1.resources
+C:\Users\Android\source\repos\SY22-23\C#\GridProgram\GridProgram\obj\Debug\GridProgram.Properties.Resources.resources
+C:\Users\Android\source\repos\SY22-23\C#\GridProgram\GridProgram\obj\Debug\GridProgram.csproj.GenerateResource.cache
+C:\Users\Android\source\repos\SY22-23\C#\GridProgram\GridProgram\obj\Debug\GridProgram.csproj.CoreCompileInputs.cache
+C:\Users\Android\source\repos\SY22-23\C#\GridProgram\GridProgram\bin\Debug\GridProgram.exe.config
+C:\Users\Android\source\repos\SY22-23\C#\GridProgram\GridProgram\bin\Debug\GridProgram.exe
+C:\Users\Android\source\repos\SY22-23\C#\GridProgram\GridProgram\bin\Debug\GridProgram.pdb
+C:\Users\Android\source\repos\SY22-23\C#\GridProgram\GridProgram\obj\Debug\GridProgram.exe
+C:\Users\Android\source\repos\SY22-23\C#\GridProgram\GridProgram\obj\Debug\GridProgram.pdb

@@ -1,0 +1,13 @@
+C:\Users\Android\source\repos\SY22-23\VB\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe.config
+C:\Users\Android\source\repos\SY22-23\VB\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe
+C:\Users\Android\source\repos\SY22-23\VB\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.pdb
+C:\Users\Android\source\repos\SY22-23\VB\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.xml
+C:\Users\Android\source\repos\SY22-23\VB\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.AssemblyReference.cache
+C:\Users\Android\source\repos\SY22-23\VB\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.SuggestedBindingRedirects.cache
+C:\Users\Android\source\repos\SY22-23\VB\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Form1.resources
+C:\Users\Android\source\repos\SY22-23\VB\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+C:\Users\Android\source\repos\SY22-23\VB\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.cache
+C:\Users\Android\source\repos\SY22-23\VB\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CoreCompileInputs.cache
+C:\Users\Android\source\repos\SY22-23\VB\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.exe
+C:\Users\Android\source\repos\SY22-23\VB\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.xml
+C:\Users\Android\source\repos\SY22-23\VB\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.pdb

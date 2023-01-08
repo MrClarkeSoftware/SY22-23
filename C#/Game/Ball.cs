@@ -23,6 +23,7 @@ namespace Game
             Debug.Print(m_picture.Name + " collided with " + other.Name);
             // We collided, so let's figure out which way we should "bounce"
             // Clear
+            GetForm1().Controls["Label1"].Text = m_picture.Name + " collided with " + other.Name;
             if (m_xdir != 0)
                 m_xdir *= -1; 
             else
