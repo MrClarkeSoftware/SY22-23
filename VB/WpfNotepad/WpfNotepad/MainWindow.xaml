@@ -14,12 +14,33 @@
                 <MenuItem Header="_Save" Click="Save_Click"></MenuItem>
                 <MenuItem Header="_Exit" Click="Exit_Click"></MenuItem>
             </MenuItem>
-            <MenuItem Header="_Edit">
+            <Menu>
+                <MenuItem Header="A">
+                    <MenuItem Header="C"></MenuItem>
+                </MenuItem>
+            </Menu>
+            <MenuItem Header="_Edit" RenderTransformOrigin="0.5,0.5">
+                <MenuItem.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="40.556"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </MenuItem.RenderTransform>
                 <MenuItem Command="ApplicationCommands.Copy"/>
                 <MenuItem Command="ApplicationCommands.Cut"/>
                 <MenuItem Command="ApplicationCommands.Paste"/>
             </MenuItem>
-            <MenuItem Header="_Font">
+            <MenuItem Header="_Font" Background="#FFF25454" RenderTransformOrigin="0.5,0.5">
+                <MenuItem.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="37.951"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </MenuItem.RenderTransform>
                 <MenuItem Header="_Bold" IsCheckable="True"
               Checked="Bold_Checked"
               Unchecked="Bold_Unchecked"/>
@@ -31,10 +52,30 @@
               Click="IncreaseFont_Click"/>
                 <MenuItem Header="_Decrease Font Size"
               Click="DecreaseFont_Click"/>
+
             </MenuItem>
         </Menu>
+        <TextBox x:Name="textBox2"  TextWrapping="Wrap" Text="TextBox" Width="120" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="11"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+
         <TextBox Name="textBox1" TextWrapping="Wrap"
-         Margin="2,19,2,-15" AcceptsReturn="True" AcceptsTab="True">
+         Margin="0,74,4,-70" AcceptsReturn="True" AcceptsTab="True" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
             The quick brown fox jumps over the lazy dog.
         </TextBox>
     </Grid>

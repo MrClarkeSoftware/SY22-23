@@ -75,9 +75,26 @@ Class MainWindow
     End Sub
 
     Private Sub DecreaseFont_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
+        Dim m As MenuItem
+        m = sender
+        textBox1.Text = sender.Header
         If textBox1.FontSize > 10 Then
             textBox1.FontSize -= 2
         End If
+        Dim t As New RotateTransform
+        t.Angle = 90
+        Dim s As New ScaleTransform
+        s.ScaleX = 0.25
+        s.ScaleY = 0.25
+        Dim tg As New TransformGroup
+        tg.Children.Add(t)
+        tg.Children.Add(s)
+        'textBox1.RenderTransform = tg
+        'For idx = 1 To 360
+        '    Threading.Thread.Sleep(100)
+        '    t.Angle = idx
+        '    textBox1.RenderTransform = t
+        'Next
     End Sub
     Private Sub Exit_Click()
         Me.Close()
