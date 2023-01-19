@@ -1,30 +1,32 @@
 ﻿Class MainWindow
-    Private Sub FromMenu(sender As Object, e As RoutedEventArgs)
-        FromtextBox.Text = sender.header
-    End Sub
-
-    Private Sub ToMenu(sender As Object, e As RoutedEventArgs)
-        TotextBox.Text = sender.header
-    End Sub
-    Function DollarstoPesos(dollars As Decimal) As Decimal
-        Return 18.5 * dollars
-    End Function
-    Function PesostoDollars(pesos As Decimal) As Decimal
-        Return pesos / 18.5
-    End Function
-
     Private Sub button_Click(sender As Object, e As RoutedEventArgs) Handles button.Click
-        Dim fromAmt As Decimal
-        Dim toAmt As Decimal
+        Dim amt As Decimal
+        Dim fRate As Decimal 'Amount of the currency 1 dollar buys
+        Dim tRate As Decimal 'Amount of the currency 1 dollar buys
 
-        Decimal.TryParse(FromtextAmount.Text, fromAmt)
+        Decimal.TryParse(FromtextBox.Text, amt)
+        If fromCombo.Text = "Dollars" Then
+            fRate = 1
+        End If
+        If fromCombo.Text = "Pesos" Then
+            fRate = 18.4
+        End If
+        If fromCombo.Text = "Euros" Then
+            fRate = 0.92
+        End If
 
-        If FromtextBox.Text = "Dollars" Then
-            toAmt = DollarstoPesos(fromAmt)
+        If toCombo.Text = "Dollars" Then
+            tRate = 1
         End If
-        If FromtextBox.Text = "Pesos" Then
-            toAmt = PesostoDollars(fromAmt)
+        If toCombo.Text = "Pesos" Then
+            tRate = 18.4
         End If
-        TotextAmount.Text = toAmt
+        If toCombo.Text = "Euros" Then
+            tRate = 0.92
+        End If
+        TotextBox.Text = Convert(amt, fRate, tRate).ToString("N2")
     End Sub
+    Function Convert(amt As Decimal, fromRate As Decimal, toRate As Decimal) As Decimal
+        Return amt / fromRate * toRate
+    End Function
 End Class

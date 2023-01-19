@@ -7,23 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Menu>
-            <MenuItem Header="From">
-                <MenuItem Header="Dollars" Click="FromMenu"></MenuItem>
-                <MenuItem Header="Pesos" Click="FromMenu"></MenuItem>
-            </MenuItem>
-            <MenuItem Header="To">
-                <MenuItem Header="Dollars" Click="ToMenu"></MenuItem>
-                <MenuItem Header="Pesos" Click="ToMenu"></MenuItem>
-            </MenuItem>
-        </Menu>
-        <Label  Content="From:" HorizontalAlignment="Left" Margin="24,50,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="FromtextBox" HorizontalAlignment="Left" Margin="67,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label  Content="To:" HorizontalAlignment="Left" Margin="24,75,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TotextBox" HorizontalAlignment="Left" Margin="67,75,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="TotextAmount" HorizontalAlignment="Left" Margin="187,75,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="FromtextAmount" HorizontalAlignment="Left" Margin="187,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="button" Content="Convert"  HorizontalAlignment="Left" Margin="24,127,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="fromCombo" HorizontalAlignment="Left" Margin="67,52,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Dollars"/>
+            <ComboBoxItem Content="Pesos"/>
+            <ComboBoxItem Content="Euros"/>
+        </ComboBox>
 
+        <Label  Content="From:" HorizontalAlignment="Left" Margin="24,50,0,0" VerticalAlignment="Top"/>
+        <Label  Content="To:" HorizontalAlignment="Left" Margin="24,75,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TotextBox" HorizontalAlignment="Left" Margin="204,81,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="FromtextBox" HorizontalAlignment="Left" Margin="204,54,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="button" Content="Convert"  HorizontalAlignment="Left" Margin="24,127,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="toCombo" HorizontalAlignment="Left" Margin="67,77,0,0" VerticalAlignment="Top" Width="120">
+        <ComboBoxItem Content="Dollars"/>
+        <ComboBoxItem Content="Pesos"/>
+        <ComboBoxItem Content="Euros"/>
+        </ComboBox>
     </Grid>
 </Window>
